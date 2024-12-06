@@ -20,6 +20,7 @@ kotlin {
             api(compose.components.resources)
             api(compose.components.uiToolingPreview)
             api(libs.androidx.lifecycle.runtime.compose)
+            api(libs.bundles.decompose)
         }
     }
 }

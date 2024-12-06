@@ -8,18 +8,16 @@ plugins {
 
 kotlin {
     sourceSets {
-        androidMain.dependencies {
-            implementation(project(":shared:common-ui"))
-        }
         commonMain.dependencies {
             implementation(project(":shared:common"))
             implementation(project(":shared:common-ui"))
+            implementation(project(":shared:features:auth"))
         }
     }
 }
 
 android {
-    namespace = "com.ecosystem.monoraise.features.auth"
+    namespace = "com.ecosystem.monoraise.features.root"
     packaging {
         resources.excludes += "/META-INF/{AL2.0,LGPL2.1}"
     }

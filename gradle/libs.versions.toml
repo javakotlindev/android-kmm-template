@@ -29,6 +29,7 @@ kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-c
 kotlin-result = { module = "com.michael-bull.kotlin-result:kotlin-result", version.ref = "kotlin-result" }
 kotlin-result-coroutines = { module = "com.michael-bull.kotlin-result:kotlin-result-coroutines", version.ref = "kotlin-result" }
 
+decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
 decompose-ext = { module = "com.arkivanov.decompose:extensions-compose", version.ref = "decompose" }
 
 serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
@@ -48,3 +49,4 @@ serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref 
 
 [bundles]
 kotlin-result = ["kotlin-result", "kotlin-result-coroutines"]
+decompose = ["decompose", "decompose-ext"]

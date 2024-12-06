@@ -2,12 +2,12 @@ package com.ecosystem.monoraise
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import com.ecosystem.monoraise.features.auth.ComposeScreen
+import com.ecosystem.monoraise.features.root.RootComponent
+import com.ecosystem.monoraise.features.root.RootScreen
 
 @Composable
-fun App() {
+fun App(component: RootComponent) {
     MaterialTheme {
-        ComposeScreen(Modifier)
+        RootScreen(component)
     }
 }

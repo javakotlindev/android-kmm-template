@@ -14,7 +14,7 @@ kotlin {
             implementation(project(":shared:data-source:remote"))
             implementation(project(":shared:data-source:local"))
             implementation(project(":shared:domain"))
-            implementation(project(":shared:features:auth"))
+            implementation(project(":shared:features:root"))
         }
     }
 }
