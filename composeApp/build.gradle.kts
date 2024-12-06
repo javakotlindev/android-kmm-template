@@ -7,20 +7,14 @@ plugins {
 
 kotlin {
     sourceSets {
-        androidMain.dependencies {
-            implementation(compose.preview)
-            implementation(libs.androidx.activity.compose)
-        }
         commonMain.dependencies {
+            implementation(project(":shared:common"))
+            implementation(project(":shared:common-ui"))
+            implementation(project(":shared:data-source:data"))
+            implementation(project(":shared:data-source:remote"))
+            implementation(project(":shared:data-source:local"))
+            implementation(project(":shared:domain"))
             implementation(project(":shared:features:auth"))
-            implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material)
-            implementation(compose.ui)
-            implementation(compose.components.resources)
-            implementation(compose.components.uiToolingPreview)
-            implementation(libs.androidx.lifecycle.viewmodel)
-            implementation(libs.androidx.lifecycle.runtime.compose)
         }
     }
 }

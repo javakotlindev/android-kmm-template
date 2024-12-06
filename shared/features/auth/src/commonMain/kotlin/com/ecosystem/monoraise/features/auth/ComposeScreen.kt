@@ -13,8 +13,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import monoraise.shared.features.auth.generated.resources.Res
-import monoraise.shared.features.auth.generated.resources.compose_multiplatform
+import com.ecosystem.monoraise.common.ui.Res
+import com.ecosystem.monoraise.common.ui.compose_multiplatform
 import org.jetbrains.compose.resources.painterResource
 
 @Composable

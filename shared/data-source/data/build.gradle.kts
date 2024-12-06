@@ -6,6 +6,10 @@ plugins {
 kotlin {
     sourceSets {
         commonMain.dependencies {
+            implementation(project(":shared:common"))
+            implementation(project(":shared:domain"))
+            implementation(project(":shared:data-source:local"))
+            implementation(project(":shared:data-source:remote"))
         }
     }
 }

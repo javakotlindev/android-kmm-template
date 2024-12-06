@@ -6,12 +6,12 @@ plugins {
 kotlin {
     sourceSets {
         commonMain.dependencies {
-            implementation(project(":shared:common"))
-            implementation(libs.bundles.kotlin.result)
+            api(libs.bundles.kotlin.result)
+            api(libs.kotlinx.coroutines.core)
         }
     }
 }
 
 android {
-    namespace = "com.ecosystem.monoraise.domain"
+    namespace = "com.ecosystem.monoraise.common"
 }

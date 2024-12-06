@@ -29,8 +29,11 @@ dependencyResolutionManagement {
 }
 
 include(":composeApp")
-include(":shared:features:auth")
+
+include(":shared:common")
+include(":shared:common-ui")
 include(":shared:domain")
 include(":shared:data-source:data")
 include(":shared:data-source:remote")
 include(":shared:data-source:local")
+include(":shared:features:auth")
