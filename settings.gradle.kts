@@ -28,7 +28,7 @@ dependencyResolutionManagement {
     }
 }
 
-include(":composeApp")
+include(":monoraiseApp")
 
 include(":shared:common")
 include(":shared:common-ui")
