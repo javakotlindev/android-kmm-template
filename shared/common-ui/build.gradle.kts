@@ -21,6 +21,7 @@ kotlin {
             api(compose.components.uiToolingPreview)
             api(libs.androidx.lifecycle.runtime.compose)
             api(libs.bundles.decompose)
+            api(libs.koin.compose)
         }
     }
 }

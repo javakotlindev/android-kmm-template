@@ -11,7 +11,7 @@ kotlin {
         }
         commonMain.dependencies {
             implementation(project(":shared:common"))
-            implementation(libs.ktor.client.core)
+            implementation(libs.bundles.ktor)
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)

@@ -93,6 +93,10 @@ private fun configureKotlinMultiplatformTargets(project: Project) {
                 isStatic = true
             }
         }
+
+        sourceSets.all {
+            languageSettings.enableLanguageFeature("ExplicitBackingFields")
+        }
     }
 }
 
