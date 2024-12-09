@@ -7,6 +7,7 @@ interface MainComponent {
 
     data class MainState(
         val titles: List<String> = listOf(),
-        val loading: Boolean = false
+        val loading: Boolean = false,
+        val error: Boolean = false,
     )
 }

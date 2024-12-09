@@ -7,6 +7,9 @@ plugins {
 
 kotlin {
     sourceSets {
+        androidMain.dependencies{
+            implementation(libs.koin.android)
+        }
         commonMain.dependencies {
             implementation(project(":shared:common"))
             implementation(project(":shared:common-ui"))

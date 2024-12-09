@@ -3,15 +3,21 @@ package com.ecosystem.monoraise.features.root
 import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.decompose.router.stack.childStack
+import com.arkivanov.decompose.router.stack.replaceAll
+import com.ecosystem.monoraise.common.ui.decompose.ComponentFactory
 import com.ecosystem.monoraise.features.auth.AuthComponentImpl
 import com.ecosystem.monoraise.features.root.RootComponent.Child
 import com.ecosystem.monoraise.features.root.RootComponent.Config
 import com.ecosystem.monoraise.features.root.RootComponent.Config.Auth
+import com.ecosystem.monoraise.features.root.RootComponent.Config.Main
+import com.ecosystem.monoraise.main.MainComponentImpl
 import kotlinx.serialization.InternalSerializationApi
 import kotlinx.serialization.serializer
+import org.koin.core.component.get
 
 class RootComponentImpl(
-    componentContext: ComponentContext
+    componentContext: ComponentContext,
+    private val componentFactory: ComponentFactory,
 ) : ComponentContext by componentContext, RootComponent {
     private val navigation = StackNavigation<Config>()
 
@@ -26,7 +32,17 @@ class RootComponentImpl(
                 Auth -> {
                     Child.Auth(
                         component = AuthComponentImpl(
-                            componentContext = componentContext
+                            componentContext = componentContext,
+                            onNavigateMain = { navigation.replaceAll(Main) }
+                        )
+                    )
+                }
+
+                Main -> {
+                    Child.Main(
+                        component = MainComponentImpl(
+                            componentContext = componentContext,
+                            repository = componentFactory.get()
                         )
                     )
                 }

@@ -15,7 +15,8 @@ import kotlinx.serialization.InternalSerializationApi
 import kotlinx.serialization.serializer
 
 class AuthComponentImpl(
-    componentContext: ComponentContext
+    componentContext: ComponentContext,
+    private val onNavigateMain: () -> Unit,
 ) : ComponentContext by componentContext, AuthComponent {
 
     private val navigation = StackNavigation<Config>()
@@ -41,7 +42,8 @@ class AuthComponentImpl(
                     Child.Sms(
                         component = SmsComponentImpl(
                             componentContext = componentContext,
-                            onNavigateBack = navigation::pop
+                            onNavigateBack = navigation::pop,
+                            onNavigateMain = onNavigateMain
                         )
                     )
                 }

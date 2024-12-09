@@ -6,10 +6,10 @@ import io.ktor.client.call.body
 import io.ktor.client.request.get
 
 class TestApi(
-    private val httpClient: HttpClient
+    private val httpClient: HttpClient,
 ) {
-    suspend fun getList(): List<TestResponse> {
+    suspend fun getList(): TestResponse {
         return httpClient.get("https://jsonplaceholder.typicode.com/todos/1")
-            .body<List<TestResponse>>()
+            .body<TestResponse>()
     }
 }

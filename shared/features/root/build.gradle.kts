@@ -13,6 +13,7 @@ kotlin {
             implementation(project(":shared:common-ui"))
             implementation(project(":shared:domain"))
             implementation(project(":shared:features:auth"))
+            implementation(project(":shared:features:main"))
         }
     }
 }

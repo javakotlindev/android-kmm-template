@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.ecosystem.monoraise.common.ui.Res
 import com.ecosystem.monoraise.common.ui.compose_multiplatform
+import com.ecosystem.monoraise.common.ui.widgets.MRButton
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -40,9 +41,16 @@ internal fun SmsScreen(component: SmsComponent) {
                 ) {
                     Image(painterResource(Res.drawable.compose_multiplatform), null)
                     Text("Compose: Sms")
-                    Button(onClick = component::onBackClick) {
-                        Text("Back!")
-                    }
+                    MRButton(
+                        text = "Back",
+                        onClick = component::onBackClick,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                    MRButton(
+                        text = "Confirm sms",
+                        onClick = component::onConfirmClick,
+                        modifier = Modifier.fillMaxWidth()
+                    )
                 }
             }
         }
